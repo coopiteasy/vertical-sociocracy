@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2019 Coop IT Easy
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <menuitem id="menu_shared_governance_main" name="Shared Governance"/>
+    <menuitem id="menu_shared_governance_base" name="Shared Governance" parent="menu_shared_governance_main"/>
+
+    <menuitem id="menu_shared_governance_mandates" name="Mandates" parent="menu_shared_governance_base" action="action_shared_governance_mandate" sequence="3" />
+
+</odoo>

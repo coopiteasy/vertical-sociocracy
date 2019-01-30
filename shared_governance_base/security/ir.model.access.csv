@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sg_mandate_user,access_sg_mandate_user,model_sg_mandate,group_shared_governance_user,1,1,1,0
+access_sg_mandate_coordinator,access_sg_mandate_coordinator,model_sg_mandate,group_shared_governance_coordinator,1,1,1,1
