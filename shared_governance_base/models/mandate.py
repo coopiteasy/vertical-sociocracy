@@ -10,6 +10,9 @@ class Mandate(models.Model):
     name = fields.Char(
         string='Name',
     )
+    purpose = fields.Html(
+        string='Purpose',
+    )
     circle_id = fields.One2many(
         'shared.governance.circle',
         'mandate_id',
