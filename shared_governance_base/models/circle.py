@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-from openerp import api, fields, models
+from openerp import api, fields, models, _
+
+from openerp.exceptions import ValidationError
 
 
 class Circle(models.Model):
@@ -38,3 +40,17 @@ class Circle(models.Model):
         comodel_name='shared.governance.policy',
         string='Policy',
     )
+
+    @api.multi
+    def unlink(self):
+        for circle in self:
+            if circle.members:
+                raise ValidationError(_("You can't delete the circle named %s"
+                                        " : You should first remove"
+                                        " all members") % (circle.name))
+            elif circle.child_ids:
+                raise ValidationError(_("You can't delete the circle named %s"
+                                        " : You should first delete the childs"
+                                        " circle") % (circle.name))
+            else:
+                super(Circle, circle).unlink()
