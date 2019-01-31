@@ -45,19 +45,13 @@
             </field>
         </record>
 
-    <act_window
-            id="action_shared_governance_policy"
-            name="Policies"
-            res_model="shared.governance.policy"
-            view_mode="tree,form"
-            view_id="view_policy_tree"
-    />
-
-    <menuitem id="menu_shared_governance_policies"
-              name="Policies"
-              parent="menu_shared_governance_base"
-              action="action_shared_governance_policy"
-    />
+        <act_window
+                id="action_shared_governance_policy"
+                name="Policies"
+                res_model="shared.governance.policy"
+                view_mode="tree,form"
+                view_id="view_policy_tree"
+        />
 
     </data>
 </odoo>

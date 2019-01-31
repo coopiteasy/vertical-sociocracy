@@ -46,19 +46,13 @@
             </field>
         </record>
 
-    <act_window
-            id="action_shared_governance_circle"
-            name="Circles"
-            res_model="shared.governance.circle"
-            view_mode="tree,form"
-            view_id="view_circle_tree"
-    />
-
-    <menuitem id="menu_shared_governance_circles"
-              name="Circles"
-              parent="menu_shared_governance_base"
-              action="action_shared_governance_circle"
-    />
+        <act_window
+                id="action_shared_governance_circle"
+                name="Circles"
+                res_model="shared.governance.circle"
+                view_mode="tree,form"
+                view_id="view_circle_tree"
+        />
 
     </data>
 </odoo>
