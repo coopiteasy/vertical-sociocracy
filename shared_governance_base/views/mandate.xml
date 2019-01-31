@@ -7,6 +7,9 @@
             <field name="arch" type="xml">
                 <tree string="Mandates" name="mandates">
                     <field name="name"/>
+                    <field name="circle_id"/>
+                    <field name="person_id"/>
+                    <field name="state"/>
                 </tree>
             </field>
         </record>

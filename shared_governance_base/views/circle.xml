@@ -9,6 +9,7 @@
                     <field name="name"/>
                     <field name="mandate_id"/>
                     <field name="parent_id"/>
+                    <field name="state"/>
                 </tree>
             </field>
         </record>
