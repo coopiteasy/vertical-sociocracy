@@ -46,19 +46,13 @@
             </field>
         </record>
 
-    <act_window
-            id="action_shared_governance_mandate"
-            name="Mandates"
-            res_model="shared.governance.mandate"
-            view_mode="tree,form"
-            view_id="view_mandate_tree"
-    />
-
-    <menuitem id="menu_shared_governance_mandates"
-              name="Mandates"
-              parent="menu_shared_governance_base"
-              action="action_shared_governance_mandate"
-    />
+        <act_window
+                id="action_shared_governance_mandate"
+                name="Mandates"
+                res_model="shared.governance.mandate"
+                view_mode="tree,form"
+                view_id="view_mandate_tree"
+        />
 
     </data>
 </odoo>
