@@ -6,8 +6,10 @@
 {
     "name": "Shared Governance Base",
     "version": "1.0",
-    "depends": ["base",
-                'mail'],
+    "depends": ['base',
+                'mail',
+                'document',
+                ],
     "author": "Coop IT Easy SCRLfs",
     "category": "Cooperative management",
     "website": "www.coopiteasy.be",

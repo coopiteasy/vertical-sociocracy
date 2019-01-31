@@ -8,7 +8,6 @@
             <field name="arch" type="xml">
                 <tree string="policies" name="policies">
                     <field name="name"/>
-                    <!--widget="many2many_tags"-->
                 </tree>
             </field>
         </record>
@@ -18,24 +17,30 @@
             <field name="model">shared.governance.policy</field>
             <field name="arch" type="xml">
             <form string="policy" name="policy">
-                <!--<sheet>-->
-                    <!--<div class="oe_button_box" name="button_box">-->
-                        <!--<button class="oe_stat_button"-->
-                            <!--icon="fa-book"-->
-                            <!--name="action_get_attachment_tree_view"-->
-                            <!--type="object">-->
-                        <!--</button>-->
-                    <!--</div>-->
+                <header></header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button"
+                            icon="fa-book"
+                            name="action_get_attachment_tree_view"
+                            type="object">
+                            <field name="attachment_number" widget="statinfo" string="Documents"/>
+                        </button>
+                    </div>
                     <group>
                         <field name="name"/>
-                        <field name="circles"/>
                         <field name="policy"/>
                     </group>
-                <!--</sheet>-->
-                <!--<div class="oe_chatter">-->
-                    <!--<field name="message_follower_ids" widget="mail_followers"/>-->
-                    <!--<field name="message_ids" widget="mail_thread"/>-->
-                <!--</div>-->
+                    <notebook>
+                        <page name="circles" string="Circles">
+                            <field name="circles"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
             </field>
         </record>
