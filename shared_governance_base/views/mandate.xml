@@ -32,11 +32,12 @@
 		                        <field name="person_id"/>
 		                    </group>
 		                    <group>
-		                    	<field name="purpose"/>
 		                    </group>
 	                    </group>
 	                    <notebook>
-	                    
+	                    	<page name="purpose" string="Purpose">
+		                    	<field name="purpose"/>
+	                    	</page>
 	                    </notebook>
                     </sheet>
                     <div class="oe_chatter">
