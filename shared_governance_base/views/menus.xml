@@ -7,6 +7,8 @@
     <menuitem id="menu_shared_governance_main" name="Shared Governance"/>
     <menuitem id="menu_shared_governance_base" name="Shared Governance" parent="menu_shared_governance_main"/>
 
-    <menuitem id="menu_shared_governance_mandates" name="Mandates" parent="menu_shared_governance_base" action="action_shared_governance_mandate" sequence="3" />
+    <menuitem id="menu_shared_governance_mandates" name="Mandates" parent="menu_shared_governance_base" action="action_shared_governance_mandate" sequence="1" />
+    <menuitem id="menu_shared_governance_person" name="Persons" parent="menu_shared_governance_base" action="action_shared_governance_person" sequence="10" />
+    <menuitem id="menu_shared_governance_circle" name="Circles" parent="menu_shared_governance_base" action="action_shared_governance_circle" sequence="20" />
 
 </odoo>
