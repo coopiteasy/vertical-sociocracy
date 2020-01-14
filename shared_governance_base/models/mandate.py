@@ -19,18 +19,6 @@ class Mandate(models.Model):
     state = fields.Selection(
         [("draft", "Draft"), ("alive", "Alive"), ("archived", "Archived")],
         string="State",
-        default="draft",
+        default="alive",
         track_visibility="onchange",
     )
-
-    @api.multi
-    def action_draft(self):
-        self.write({"state": "draft"})
-
-    @api.multi
-    def action_alive(self):
-        self.write({"state": "alive"})
-
-    @api.multi
-    def action_archive(self):
-        self.write({"state": "archived"})
