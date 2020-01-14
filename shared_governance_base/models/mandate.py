@@ -9,10 +9,11 @@ class Mandate(models.Model):
 
     name = fields.Char(string="Name", required=True)
     purpose = fields.Html(string="Purpose")
-    user_id = fields.Many2one(
+    partner_id = fields.Many2one(
         string="Assigned Person",
-        comodel_name="res.users",
-        default=lambda self: self.env.user,
+        comodel_name="res.partner",
+        default=lambda self: self.env.user.partner_id,
+        domain="[('sg_type', '!=', False)]",
         track_visibility="onchange",
     )
     state = fields.Selection(

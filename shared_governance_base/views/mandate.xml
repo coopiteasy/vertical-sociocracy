@@ -12,7 +12,7 @@
             <field name="arch" type="xml">
                 <tree string="Mandates" name="mandates">
                     <field name="name"/>
-                    <field name="user_id"/>
+                    <field name="partner_id"/>
                     <field name="state"/>
                 </tree>
             </field>
@@ -30,7 +30,7 @@
 	                    <group>
 	                    	<group>
 		                        <field name="name"/>
-		                        <field name="user_id"/>
+		                        <field name="partner_id"/>
 		                    </group>
 	                    </group>
 	                    <notebook>
@@ -51,9 +51,9 @@
             <field name="name">view_mandate_kanban</field>
             <field name="model">sg.mandate</field>
             <field name="arch" type="xml">
-                <kanban default_group_by="user_id" group_create="false">
+                <kanban default_group_by="partner_id" group_create="false">
                     <field name="name"/>
-                    <field name="user_id"/>
+                    <field name="partner_id"/>
                     <field name="state"/>
                     <templates>
                         <t t-name="kanban-box">

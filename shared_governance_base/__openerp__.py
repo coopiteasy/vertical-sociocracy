@@ -18,6 +18,7 @@
         "security/shared_governance_security.xml",
         "security/ir.model.access.csv",
         "views/mandate.xml",
+        "views/res_partner.xml",
         "views/menus.xml",
     ],
     "installable": True,
