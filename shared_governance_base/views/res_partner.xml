@@ -11,7 +11,8 @@
         <field name="arch" type="xml">
 
             <xpath expr="//page[@name='internal_notes']" position="before">
-                <page name="shared_governance" string="Shared Governance">
+                <page name="shared_governance" string="Shared Governance"
+                      groups="shared_governance_base.group_shared_governance_user">
                     <group>
                         <field name="sg_type"/>
                     </group>
@@ -25,7 +26,7 @@
                     </group>
                 </page>
             </xpath>
-            
+
         </field>
     </record>
 
@@ -36,8 +37,8 @@
         <field name="domain">[('sg_type', '=', 'person')]</field>
         <field name="view_id" ref="base.view_partner_tree"/>
         <field name="view_mode">tree,form</field>
-<!--        <field name="search_view_id" ref="view_mandate_filter"/>-->
-<!--        <field name="context">{'search_default_alive': 1}</field>-->
+        <!--        <field name="search_view_id" ref="view_mandate_filter"/>-->
+        <!--        <field name="context">{'search_default_alive': 1}</field>-->
     </record>
 
     <record id="action_shared_governance_circle" model="ir.actions.act_window">
@@ -47,7 +48,7 @@
         <field name="domain">[('sg_type', '=', 'circle')]</field>
         <field name="view_id" ref="base.view_partner_tree"/>
         <field name="view_mode">tree,form</field>
-<!--        <field name="search_view_id" ref="view_mandate_filter"/>-->
-<!--        <field name="context">{'search_default_alive': 1}</field>-->
+        <!--        <field name="search_view_id" ref="view_mandate_filter"/>-->
+        <!--        <field name="context">{'search_default_alive': 1}</field>-->
     </record>
 </odoo>
