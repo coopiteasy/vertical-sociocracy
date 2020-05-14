@@ -4,7 +4,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 -->
 <odoo>
-    <menuitem id="menu_shared_governance_main" name="Shared Governance"/>
+    <menuitem id="menu_shared_governance_main" groups="base.group_user" name="Shared Governance"/>
     <menuitem id="menu_shared_governance_base" name="Shared Governance" parent="menu_shared_governance_main"/>
 
     <menuitem id="menu_shared_governance_mandates" name="Mandates" parent="menu_shared_governance_base" action="action_shared_governance_mandate" sequence="1" />
