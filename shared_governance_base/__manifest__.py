@@ -4,13 +4,13 @@
 
 {
     "name": "Shared Governance",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "depends": ["base", "mail", "document"],
     "author": "Coop IT Easy SCRLfs",
     "category": "Cooperative Management",
     "website": "www.coopiteasy.be",
     "license": "AGPL-3",
-    "description": """
+    "summary": """
         Shared Governance in Sociocracy organizations.
     """,
     "data": [
