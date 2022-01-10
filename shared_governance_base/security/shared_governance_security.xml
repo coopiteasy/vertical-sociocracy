@@ -18,7 +18,7 @@
     <record id="group_shared_governance_coordinator" model="res.groups">
         <field name="name">Coordinator</field>
         <field name="implied_ids" eval="[(4, ref('group_shared_governance_user'))]"/>
-        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
         <field name="category_id" ref="module_category_shared_governance"/>
     </record>
 </odoo>
