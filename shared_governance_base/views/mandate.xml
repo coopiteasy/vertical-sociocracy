@@ -4,92 +4,88 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 -->
 <odoo>
-	<data>
+    <record id="view_mandate_tree" model="ir.ui.view">
+        <field name="name">view.mandate.tree</field>
+        <field name="model">sg.mandate</field>
+        <field name="arch" type="xml">
+            <tree string="Mandates" name="mandates">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
 
-        <record id="view_mandate_tree" model="ir.ui.view">
-            <field name="name">view.mandate.tree</field>
-            <field name="model">sg.mandate</field>
-            <field name="arch" type="xml">
-                <tree string="Mandates" name="mandates">
-                    <field name="name"/>
-                    <field name="partner_id"/>
-                    <field name="state"/>
-                </tree>
-            </field>
-        </record>
+    <record id="view_mandate_form" model="ir.ui.view">
+        <field name="name">view.mandate.form</field>
+        <field name="model">sg.mandate</field>
+        <field name="arch" type="xml">
+            <form string="Mandate" name="mandate">
+                <header>
+                    <field name="state" widget="statusbar" clickable="1"/>
+                </header>
+                <sheet string="Mandate">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="partner_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="purpose" string="Purpose">
+                            <field name="purpose"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
 
-        <record id="view_mandate_form" model="ir.ui.view">
-            <field name="name">view.mandate.form</field>
-            <field name="model">sg.mandate</field>
-            <field name="arch" type="xml">
-                <form string="Mandate" name="mandate">
-                    <header>
-                        <field name="state" widget="statusbar" clickable="1"/>
-                    </header>
-                    <sheet string="Mandate">
-	                    <group>
-	                    	<group>
-		                        <field name="name"/>
-		                        <field name="partner_id"/>
-		                    </group>
-	                    </group>
-	                    <notebook>
-	                    	<page name="purpose" string="Purpose">
-		                    	<field name="purpose"/>
-	                    	</page>
-	                    </notebook>
-                    </sheet>
-                    <div class="oe_chatter">
-                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
-                        <field name="message_ids" widget="mail_thread"/>
-                    </div>
-                </form>
-            </field>
-        </record>
-
-        <record id="view_mandate_kanban" model="ir.ui.view">
-            <field name="name">view_mandate_kanban</field>
-            <field name="model">sg.mandate</field>
-            <field name="arch" type="xml">
-                <kanban default_group_by="partner_id" group_create="false">
-                    <field name="name"/>
-                    <field name="partner_id"/>
-                    <field name="state"/>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
-                                <div class="oe_kanban_content">
-                                    <div>
-                                        <strong><field name="name"/></strong>
+    <record id="view_mandate_kanban" model="ir.ui.view">
+        <field name="name">view_mandate_kanban</field>
+        <field name="model">sg.mandate</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="partner_id" group_create="false">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="oe_kanban_content">
+                                <div>
+                                    <strong><field name="name"/></strong>
 <!--                                        <field name="state"/>-->
-                                    </div>
                                 </div>
                             </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 
-        <record id="view_mandate_filter" model="ir.ui.view">
-            <field name="name">view_mandate_filter</field>
-            <field name="model">sg.mandate</field>
-            <field name="arch" type="xml">
-                <search>
-                    <filter name="alive" string="Alive" domain="[('state', '=', 'alive')]"/>
-                </search>
-            </field>
-        </record>
+    <record id="view_mandate_filter" model="ir.ui.view">
+        <field name="name">view_mandate_filter</field>
+        <field name="model">sg.mandate</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="alive" string="Alive" domain="[('state', '=', 'alive')]"/>
+            </search>
+        </field>
+    </record>
 
-        <record id="action_shared_governance_mandate" model="ir.actions.act_window">
-            <field name="name">Mandates</field>
-            <field name="res_model">sg.mandate</field>
-            <field name="context">{'search_default_state': 'alive'}</field>
-            <field name="view_id" ref="view_mandate_kanban"/>
-            <field name="view_mode">kanban,tree,form</field>
-            <field name="search_view_id" ref="view_mandate_filter"/>
-            <field name="context">{'search_default_alive': 1}</field>
-        </record>
-
-    </data>
+    <record id="action_shared_governance_mandate" model="ir.actions.act_window">
+        <field name="name">Mandates</field>
+        <field name="res_model">sg.mandate</field>
+        <field name="context">{'search_default_state': 'alive'}</field>
+        <field name="view_id" ref="view_mandate_kanban"/>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="view_mandate_filter"/>
+        <field name="context">{'search_default_alive': 1}</field>
+    </record>
 </odoo>

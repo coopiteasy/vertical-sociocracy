@@ -5,7 +5,7 @@
 
 {
     "name": "Shared Governance",
-    "version": "1.0",
+    "version": "10.0.1.0.0",
     "depends": ["base", "mail", "document"],
     "author": "Coop IT Easy SCRLfs",
     "category": "Cooperative Management",
