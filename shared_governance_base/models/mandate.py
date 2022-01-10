@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
 from odoo import api, fields, models
 
 
 class Mandate(models.Model):
     _name = "sg.mandate"
 
-    _inherit = ["mail.thread", "ir.needaction_mixin"]
+    _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char(string="Name", required=True)
     purpose = fields.Html(string="Purpose")
