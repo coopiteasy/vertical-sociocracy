@@ -8,7 +8,7 @@
     "depends": ["base", "mail", "document"],
     "author": "Coop IT Easy SCRLfs",
     "category": "Cooperative Management",
-    "website": "www.coopiteasy.be",
+    "website": "https://coopiteasy.be",
     "license": "AGPL-3",
     "summary": """
         Shared Governance in Sociocracy organizations.

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
      Copyright 2019 Coop IT Easy
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
@@ -7,20 +7,23 @@
     <record id="view_partner_form" model="ir.ui.view">
         <field name="name">view_partner_form</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
 
             <xpath expr="//page[@name='internal_notes']" position="before">
-                <page name="shared_governance" string="Shared Governance"
-                      groups="shared_governance_base.group_shared_governance_user">
+                <page
+                    name="shared_governance"
+                    string="Shared Governance"
+                    groups="shared_governance_base.group_shared_governance_user"
+                >
                     <group>
-                        <field name="sg_type"/>
+                        <field name="sg_type" />
                     </group>
                     <group>
                         <field name="mandate_ids" nolabel="1">
                             <tree>
-                                <field name="name"/>
-                                <field name="state"/>
+                                <field name="name" />
+                                <field name="state" />
                             </tree>
                         </field>
                     </group>
@@ -35,7 +38,7 @@
         <field name="res_model">res.partner</field>
         <field name="context">{'default_sg_type': 'person'}</field>
         <field name="domain">[('sg_type', '=', 'person')]</field>
-        <field name="view_id" ref="base.view_partner_tree"/>
+        <field name="view_id" ref="base.view_partner_tree" />
         <field name="view_mode">tree,form</field>
         <!--        <field name="search_view_id" ref="view_mandate_filter"/>-->
         <!--        <field name="context">{'search_default_alive': 1}</field>-->
@@ -46,7 +49,7 @@
         <field name="res_model">res.partner</field>
         <field name="context">{'default_sg_type': 'circle'}</field>
         <field name="domain">[('sg_type', '=', 'circle')]</field>
-        <field name="view_id" ref="base.view_partner_tree"/>
+        <field name="view_id" ref="base.view_partner_tree" />
         <field name="view_mode">tree,form</field>
         <!--        <field name="search_view_id" ref="view_mandate_filter"/>-->
         <!--        <field name="context">{'search_default_alive': 1}</field>-->

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
      Copyright 2019 Coop IT Easy
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
@@ -11,14 +11,14 @@
 
     <record id="group_shared_governance_user" model="res.groups">
         <field name="name">User</field>
-        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
-        <field name="category_id" ref="module_category_shared_governance"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field name="category_id" ref="module_category_shared_governance" />
     </record>
 
     <record id="group_shared_governance_coordinator" model="res.groups">
         <field name="name">Coordinator</field>
-        <field name="implied_ids" eval="[(4, ref('group_shared_governance_user'))]"/>
-        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
-        <field name="category_id" ref="module_category_shared_governance"/>
+        <field name="implied_ids" eval="[(4, ref('group_shared_governance_user'))]" />
+        <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        <field name="category_id" ref="module_category_shared_governance" />
     </record>
 </odoo>
