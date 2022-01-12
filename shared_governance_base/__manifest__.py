@@ -20,6 +20,5 @@
         "views/res_partner.xml",
         "views/menus.xml",
     ],
-    "installable": True,
     "application": True,
 }
