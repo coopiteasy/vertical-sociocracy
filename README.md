@@ -7,8 +7,9 @@
 
 Available addons
 ----------------
-addon | version | summary
---- | --- | ---
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[shared_governance_base](shared_governance_base/) | 12.0.1.0.0 |  | Shared Governance in Sociocracy organizations.
 
 [//]: # (end addons)
 <!-- prettier-ignore-end -->
