@@ -8,7 +8,7 @@
     "depends": ["mail"],
     "author": "Coop IT Easy SC",
     "category": "Cooperative Management",
-    "website": "https://coopiteasy.be",
+    "website": "https://github.com/coopiteasy/vertical-sociocracy",
     "license": "AGPL-3",
     "summary": """
         Shared Governance in Sociocracy organizations.
